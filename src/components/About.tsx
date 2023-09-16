@@ -56,16 +56,7 @@ export function About() {
 
 function Cards() {
   return (
-    <motion.ul
-      className="grid col-span-12 grid-cols-3 gap-x-8 opacity-0"
-      initial={{ y: 100, scale: 0.9 }}
-      whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      viewport={{ once: true, margin: '-100px' }}
-      transition={{
-        opacity: { duration: 0.5, delay: 0.1 },
-        layout: { duration: 0.5 },
-      }}
-    >
+    <motion.ul className="grid col-span-12 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
       {aboutCards.map((card) => (
         <Card key={card.title} {...card} />
       ))}
@@ -75,7 +66,16 @@ function Cards() {
 
 function Card({ title, description, location, Icon }: CardProps) {
   return (
-    <li className="w-full rounded-3xl h-[434px] ring-1 ring-gray-500 p-4 relative cursor-pointer">
+    <motion.li
+      className="col-span-1 w-full rounded-3xl h-[434px] ring-1 ring-gray-500 p-4 relative cursor-pointer opacity-0"
+      initial={{ y: 100, scale: 0.9 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      viewport={{ once: true, margin: '-100px' }}
+      transition={{
+        opacity: { duration: 0.5, delay: 0.1 },
+        layout: { duration: 0.5 },
+      }}
+    >
       <Image
         src="https://source.unsplash.com/random"
         alt="lorem"
@@ -97,6 +97,7 @@ function Card({ title, description, location, Icon }: CardProps) {
         style={{
           objectFit: 'cover',
           height: '322px',
+          width: '100%',
         }}
         className="z-10 rounded-2xl hover:bg-[120%] brightness-75 hover:brightness-100 transition-all duration-300"
       />
@@ -109,6 +110,6 @@ function Card({ title, description, location, Icon }: CardProps) {
           <span className="text-caption">{location}</span>
         </div>
       </div>
-    </li>
+    </motion.li>
   )
 }
