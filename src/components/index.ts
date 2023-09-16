@@ -1,3 +1,6 @@
 export * from './GridBackground'
 export * from './Logo'
 export * from './Signature'
+export * from './Hero'
+export * from './Header'
+export * from './HeroSelectionIndicator'

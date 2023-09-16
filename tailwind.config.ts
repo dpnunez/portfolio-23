@@ -37,14 +37,15 @@ const config: Config = {
       container: {
         // you can configure the container to be centered
         center: true,
+        padding: '8px',
 
         // default breakpoints but with 40px removed
         screens: {
           sm: '600px',
           md: '728px',
           lg: '984px',
-          xl: '1216px',
-          '2xl': '1216px',
+          xl: 'calc(1216px + 16px)',
+          '2xl': 'calc(1216px + 16px)',
         },
       },
     },

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 export function Signature() {
   return (
-    <svg width="494" height="194" viewBox="0 0 494 194">
+    <svg viewBox="0 0 494 194" className="w-[260px] lg:w-[490px]">
       <motion.path
         fill="none"
         animate={{

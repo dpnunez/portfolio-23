@@ -4,11 +4,28 @@
 
 * {
 	line-height: 1.5;
-	font-family: 'Inter', sans-serif;
+	font-family: var(--font-inter);
+	color: theme("colors.gray-100");
 }
 
 h1, h2, h3, h4 {
 	line-height: 1.25;
+}
+
+h1 {
+	font-size: theme("fontSize.h1");
+}
+
+h2 {
+	font-size: theme("fontSize.h2");
+}
+
+h3 {
+	font-size: theme("fontSize.h3");
+}
+
+p, span, a, li, input, button, label, select, option, textarea {
+	font-size: theme("fontSize.body");
 }
 
 html {
