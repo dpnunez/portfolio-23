@@ -1,4 +1,4 @@
-import { GridBackground, Header, Hero, Logo, Signature } from '@/components'
+import { GridBackground, Header, Hero, About } from '@/components'
 
 export default function Home() {
   return (
@@ -6,6 +6,7 @@ export default function Home() {
       <GridBackground />
       <Header />
       <Hero />
+      <About />
     </main>
   )
 }
