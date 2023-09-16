@@ -19,7 +19,7 @@ export function About() {
           layout
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, margin: '-200px' }}
-          className=" text-h2 opacity-0"
+          className="text-h2 opacity-0"
         >
           About
         </motion.h2>
@@ -66,7 +66,7 @@ function Cards() {
         layout: { duration: 0.5 },
       }}
     >
-      {aboutCards.map((card, i) => (
+      {aboutCards.map((card) => (
         <Card key={card.title} {...card} />
       ))}
     </motion.ul>
