@@ -1,4 +1,4 @@
-import { GridBackground, Header, Hero, About } from '@/components'
+import { GridBackground, Header, Hero, About, Stack } from '@/components'
 
 export default function Home() {
   return (
@@ -7,6 +7,7 @@ export default function Home() {
       <Header />
       <Hero />
       <About />
+      <Stack />
     </main>
   )
 }

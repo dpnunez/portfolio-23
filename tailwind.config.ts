@@ -12,6 +12,7 @@ const config: Config = {
         'primary-main': '#F97316',
         'primary-light': '#FB9D5C',
         'primary-dark': '#AE510F',
+        'primary-low-opacity': 'rgba(249, 115, 22, 0.1)',
 
         'gray-900': '#040405',
         'gray-800': '#212122',
@@ -25,7 +26,9 @@ const config: Config = {
         'gray-50': '#FCFCFB',
 
         green: '#22C55E',
+        'green-low-opacity': 'rgba(34, 197, 94, 0.1)',
         purple: '#4F46E5',
+        'purple-low-opacity': 'rgba(79, 70, 229, 0.1)',
       },
       fontSize: {
         caption: '0.875rem',

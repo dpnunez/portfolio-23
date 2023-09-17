@@ -26,3 +26,18 @@ export const aboutCards = [
     location: 'Pelotas',
   },
 ]
+
+export const animationStackCardsVariants = {
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      when: 'beforeChildren',
+      staggerChildren: 0.2,
+    },
+  },
+  hidden: {
+    y: 32,
+    opacity: 0,
+  },
+}

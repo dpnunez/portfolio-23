@@ -85,7 +85,7 @@ export function HeroSelectionIndicator({
           x,
           y: bottomBadge ? y + height + 12 : y - 32,
         }}
-        className="absolute left-0 top-0 text-caption bg-primary-main bg-opacity-30 px-2 rounded-lg"
+        className="text-gray-100 absolute left-0 top-0 text-caption bg-primary-main bg-opacity-30 px-2 rounded-lg"
       >
         {(Number(width.toFixed(0)) / 8) * 8} x{' '}
         {(Number(height.toFixed(0)) / 8) * 8}

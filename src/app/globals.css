@@ -40,3 +40,8 @@ html {
 ::selection {
 	background: theme("colors.purple")
 }
+
+
+.grid-background-size {
+	background-size: 200px 1px;
+}

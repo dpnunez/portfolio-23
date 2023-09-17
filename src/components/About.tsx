@@ -13,13 +13,14 @@ interface CardProps {
 
 export function About() {
   return (
-    <section className="container grid grid-cols-12 gap-x-8 mb-10">
+    <section className="container grid grid-cols-12 gap-x-8 mb-32">
       <div className="overflow-hidden col-span-12">
         <motion.h2
+          initial={{ y: 32 }}
           layout
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, margin: '-200px' }}
-          className="text-h2 opacity-0"
+          className="opacity-0"
         >
           About
         </motion.h2>
