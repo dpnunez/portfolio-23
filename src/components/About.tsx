@@ -19,7 +19,7 @@ export function About() {
           initial={{ y: 32 }}
           layout
           whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true, margin: '-200px' }}
+          viewport={{ once: true, margin: '-150px 0px -150px 0px' }}
           className="opacity-0"
         >
           About
@@ -28,7 +28,7 @@ export function About() {
       <div className="col-span-12 lg:col-span-6 mb-20 mt-8">
         <motion.p
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true, margin: '-200px' }}
+          viewport={{ once: true, margin: '-150px 0px -150px 0px' }}
           className="mb-6 opacity-0"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -41,7 +41,7 @@ export function About() {
         </motion.p>
         <motion.p
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true, margin: '-200px' }}
+          viewport={{ once: true, margin: '-150px 0px -150px 0px' }}
           className="opacity-0"
         >
           Eea commodo consequat. Duis aute irure dolor in reprehenderit in

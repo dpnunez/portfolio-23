@@ -11,7 +11,7 @@ export function Stack() {
           layout
           initial={{ y: 32 }}
           whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true, margin: '-200px' }}
+          viewport={{ once: true, margin: '-150px 0px -150px 0px' }}
           className="opacity-0"
         >
           Stack
@@ -67,6 +67,34 @@ export function Stack() {
             <GridComponent className="bg-purple-low-opacity" />
           )}
         />
+        <div>
+          <div className="max-w-[550px] overflow-hidden">
+            <motion.h3
+              layout
+              transition={{
+                duration: 0.75,
+                delay: 0.5,
+              }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, amount: 'all' }}
+              className="text-h1 font-bold max-w-[550px] mb-4 opacity-0"
+            >
+              Experience with many other tools
+            </motion.h3>
+          </div>
+          <motion.p
+            className="text-h3 opacity-0"
+            layout
+            transition={{
+              duration: 0.75,
+              delay: 0.5,
+            }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 'all' }}
+          >
+            feel free to reach out and ask about a specific tool
+          </motion.p>
+        </div>
       </div>
     </section>
   )

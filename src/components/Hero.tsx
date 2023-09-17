@@ -37,7 +37,8 @@ export function Hero() {
     }
 
     getInitialCoordinates()
-    window.addEventListener('resize', getInitialCoordinates)
+    const heroElement = document.getElementById('hero') as Element
+    new ResizeObserver(getInitialCoordinates).observe(heroElement)
 
     // generate random focus change
     const changeFocusInterval = setInterval(() => {
@@ -48,13 +49,15 @@ export function Hero() {
     }, 4000)
 
     return () => {
-      window.removeEventListener('resize', getInitialCoordinates)
       clearInterval(changeFocusInterval)
     }
   }, [])
 
   return (
-    <section className="container flex flex-col items-center justify-center h-[calc(100vh-96px)]">
+    <section
+      id="hero"
+      className="container flex flex-col items-center justify-center h-[calc(100vh-96px)]"
+    >
       <div
         id="hero-signature"
         className="cursor-pointer"
