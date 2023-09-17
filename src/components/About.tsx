@@ -3,6 +3,7 @@ import { aboutCards } from '@/constants'
 import Image from 'next/image'
 import { BackpackIcon } from '@radix-ui/react-icons'
 import { motion } from 'framer-motion'
+import { useNavigation } from '@/global/navigation'
 
 interface CardProps {
   title: string
@@ -12,8 +13,19 @@ interface CardProps {
 }
 
 export function About() {
+  const addNavigationStack = useNavigation((state) => state.pushActiveStack)
+  const removeNavigationStack = useNavigation(
+    (state) => state.removeFromActiveStack,
+  )
+
   return (
-    <section className="container grid grid-cols-12 gap-x-8 mb-32">
+    <motion.section
+      onViewportLeave={() => removeNavigationStack('about')}
+      onViewportEnter={() => addNavigationStack('about')}
+      viewport={{ margin: '-150px 0px -150px 0px' }}
+      id="about"
+      className="container grid grid-cols-12 gap-x-8 mb-32 mt-48"
+    >
       <div className="overflow-hidden col-span-12">
         <motion.h2
           initial={{ y: 32 }}
@@ -51,7 +63,7 @@ export function About() {
         </motion.p>
       </div>
       <Cards />
-    </section>
+    </motion.section>
   )
 }
 

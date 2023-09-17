@@ -3,6 +3,7 @@ import { useLayoutEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Signature, HeroSelectionIndicator } from '@/components'
 import { heroFocusableItemsIds } from '@/constants'
+import { useNavigation } from '@/global/navigation'
 
 interface coordinatesType {
   x: number
@@ -20,6 +21,11 @@ export function Hero() {
   const [currentCoordinateKey, setCurrentCoordinateKey] =
     useState<string>('hero-primary')
   const currentCoordinates = coordinates[currentCoordinateKey]
+
+  const addNavigationStack = useNavigation((state) => state.pushActiveStack)
+  const removeNavigationStack = useNavigation(
+    (state) => state.removeFromActiveStack,
+  )
 
   // Get focusable coordiantes and size
   useLayoutEffect(() => {
@@ -54,9 +60,12 @@ export function Hero() {
   }, [])
 
   return (
-    <section
+    <motion.section
+      onViewportLeave={() => removeNavigationStack('hero')}
+      onViewportEnter={() => addNavigationStack('hero')}
+      viewport={{ margin: '-150px 0px -150px 0px' }}
       id="hero"
-      className="container flex flex-col items-center justify-center h-[calc(100vh-96px)]"
+      className="container flex flex-col items-center justify-center h-[calc(100vh-96px-32px-16px)]"
     >
       <div
         id="hero-signature"
@@ -89,6 +98,6 @@ export function Hero() {
         {...currentCoordinates}
         bottomBadge={currentCoordinateKey === 'hero-secondary'}
       />
-    </section>
+    </motion.section>
   )
 }

@@ -1,11 +1,22 @@
 'use client'
 import { animationStackCardsVariants } from '@/constants'
+import { useNavigation } from '@/global/navigation'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 
 export function Stack() {
+  const addNavigationStack = useNavigation((state) => state.pushActiveStack)
+  const removeNavigationStack = useNavigation(
+    (state) => state.removeFromActiveStack,
+  )
+
   return (
-    <section className="container grid grid-cols-12 mb-32">
+    <motion.section
+      onViewportEnter={() => addNavigationStack('stack')}
+      onViewportLeave={() => removeNavigationStack('stack')}
+      id="stack"
+      className="container grid grid-cols-12 mb-32"
+    >
       <div className="overflow-hidden col-span-12">
         <motion.h2
           layout
@@ -96,7 +107,7 @@ export function Stack() {
           </motion.p>
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

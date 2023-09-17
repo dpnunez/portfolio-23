@@ -1,4 +1,10 @@
-import { BackpackIcon, ReaderIcon } from '@radix-ui/react-icons'
+import {
+  BackpackIcon,
+  ReaderIcon,
+  GitHubLogoIcon,
+  LinkedInLogoIcon,
+  EnvelopeClosedIcon,
+} from '@radix-ui/react-icons'
 
 export const heroFocusableItemsIds = [
   'hero-signature',
@@ -41,3 +47,37 @@ export const animationStackCardsVariants = {
     opacity: 0,
   },
 }
+
+export const navigationItems = [
+  {
+    id: 'hero',
+    label: 'Home',
+  },
+  {
+    id: 'about',
+    label: 'About',
+  },
+  {
+    id: 'stack',
+    label: 'Stack',
+  },
+  {
+    id: 'contact',
+    label: 'Contact',
+  },
+]
+
+export const socials = [
+  {
+    icon: GitHubLogoIcon,
+    href: 'https://github.com/dpnunez/',
+  },
+  {
+    icon: LinkedInLogoIcon,
+    href: 'https://www.linkedin.com/in/daniel-porto-nunez/',
+  },
+  {
+    icon: EnvelopeClosedIcon,
+    href: 'mailto:daniel.portonunez@gmail.com',
+  },
+]
