@@ -6,14 +6,31 @@
 	line-height: 1.5;
 	font-family: var(--font-inter);
 	color: theme("colors.gray-400");
+	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 html {
-  scroll-behavior: smooth;
+	--bg: theme("colors.gray-900");
+	--heading-color: theme("colors.gray-100");
+	--text-color: theme("colors.gray-400");
+}
+
+
+html[class="light"] {
+	--bg: theme("colors.gray-100");
+	--heading-color: theme("colors.gray-900");
+	--text-color: theme("colors.gray-700"); 
+}
+
+
+
+html {
+	background-color: var(--bg);
+	scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, path, button {
-	color: theme("colors.gray-100");
+	color: var(--heading-color);
 	line-height: 1.25;
 }
 
@@ -31,15 +48,13 @@ h3 {
 
 p, span, a, li, input, button, label, select, option, textarea {
 	font-size: theme("fontSize.body");
+	color: var(--text-color);
 }
 
 span {
 	color: inherit;
 }
 
-html {
-	background-color: theme("colors.gray-900");
-}
 
 ::selection {
 	background: theme("colors.purple")
@@ -57,7 +72,7 @@ input, textarea {
 	border-right: 0;
 	border-top: 0;
 	padding: 0.5rem;
-	color: theme("colors.gray-100");
+	color: var(--heading-color)
 }
 
 

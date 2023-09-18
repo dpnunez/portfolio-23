@@ -171,7 +171,7 @@ function CardBadge({
 }) {
   return (
     <span
-      className={`text-gray-100 absolute rounded-md px-2 py-1 text-caption ${className}`}
+      className={`text-gray-900 dark:text-gray-100 absolute rounded-md px-2 py-1 text-caption ${className}`}
     >
       {children}
     </span>

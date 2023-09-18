@@ -1,4 +1,4 @@
-import { Signature } from '.'
+import { Signature } from '@/components'
 
 export function Footer() {
   return (

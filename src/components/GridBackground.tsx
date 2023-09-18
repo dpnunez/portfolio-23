@@ -16,7 +16,7 @@ export function GridBackground() {
                 delay: i * 0.5,
               }}
               key={i}
-              className="bg-gray-800 opacity-30 min-w-[1px] h-0 mr-[138px] lg:mr-[208px] block"
+              className="bg-gray-300 dark:bg-gray-800 opacity-30 min-w-[1px] h-0 mr-[138px] lg:mr-[208px] block"
             />
           ))}
         </div>
