@@ -96,7 +96,6 @@ export function Navigation() {
 }
 
 function NavigationIndicator({ x, width, height }: coordinatesType) {
-  console.log(x, width, height)
   return (
     <motion.div
       animate={{

@@ -1,13 +1,4 @@
-import {
-  GridBackground,
-  Header,
-  Hero,
-  About,
-  Stack,
-  Navigation,
-  Contact,
-  Footer,
-} from '@/components'
+import { Hero, About, Stack, Navigation, Contact } from '@/components'
 
 export default function Home() {
   return (

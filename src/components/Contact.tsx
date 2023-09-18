@@ -2,6 +2,7 @@
 import { socials } from '@/constants'
 import { useNavigation } from '@/global/navigation'
 import { motion } from 'framer-motion'
+import { useForm } from 'react-hook-form'
 
 export function Contact() {
   const addNavigationStack = useNavigation((state) => state.pushActiveStack)
@@ -53,14 +54,31 @@ export function Contact() {
 }
 
 function ContactForm() {
+  const { register, handleSubmit, formState } = useForm({
+    reValidateMode: 'onChange',
+  })
+
+  const enableSubmit = formState.isDirty && formState.isValid
+
+  const onSubmit = handleSubmit(() => {
+    console.log('teste')
+  })
+
   return (
-    <form className="flex-1 flex flex-col gap-11">
-      <input placeholder="Name" />
-      <input placeholder="Email" />
-      <textarea placeholder="Message" />
+    <form className="flex-1 flex flex-col gap-11" onSubmit={onSubmit}>
+      <input {...register('name', { required: true })} placeholder="Name" />
+      <input
+        {...register('email', {
+          required: true,
+          pattern: /\S+@\S+\.\S+/,
+        })}
+        placeholder="Email"
+      />
+      <textarea {...register('message')} placeholder="Message" />
       <button
-        type="button"
-        className="bg-primary-low-opacity rounded-lg p-5 hover:brightness-125 transition-all duration-300"
+        disabled={!enableSubmit}
+        type="submit"
+        className="disabled:grayscale disabled:cursor-not-allowed bg-primary-low-opacity rounded-lg p-5 hover:brightness-125 transition-all duration-500"
       >
         Submit
       </button>
