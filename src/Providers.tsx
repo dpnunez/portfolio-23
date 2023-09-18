@@ -1,5 +1,4 @@
 'use client'
-import { TooltipProvider } from '@radix-ui/react-tooltip'
 import { ThemeProvider } from 'next-themes'
 import { useState, useEffect } from 'react'
 import { Toaster } from 'react-hot-toast'
@@ -17,19 +16,17 @@ export function Providers({ children }: { children: React.ReactNode }) {
 
   return (
     <ThemeProvider attribute="class" defaultTheme="dark">
-      <TooltipProvider>
-        <Toaster
-          position="bottom-right"
-          toastOptions={{
-            style: {
-              background: 'var(--bg)',
-              border: '1px solid var(--text-color)',
-              color: 'var(--text-color)',
-            },
-          }}
-        />
-        {children}
-      </TooltipProvider>
+      <Toaster
+        position="bottom-right"
+        toastOptions={{
+          style: {
+            background: 'var(--bg)',
+            border: '1px solid var(--text-color)',
+            color: 'var(--text-color)',
+          },
+        }}
+      />
+      {children}
     </ThemeProvider>
   )
 }

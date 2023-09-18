@@ -204,7 +204,7 @@ function Card({ name, icon }: itemDataInterface) {
           </Tooltip.Trigger>
           <Tooltip.Portal>
             <Tooltip.Content className="TooltipContent" sideOffset={5}>
-              Add to library
+              {name}
               <Tooltip.Arrow className="TooltipArrow" />
             </Tooltip.Content>
           </Tooltip.Portal>
