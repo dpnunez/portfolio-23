@@ -5,6 +5,8 @@ import { motion } from 'framer-motion'
 import { useForm } from 'react-hook-form'
 import toast from 'react-hot-toast'
 
+import axios from 'axios'
+
 export function Contact() {
   const addNavigationStack = useNavigation((state) => state.pushActiveStack)
   const removeNavigationStack = useNavigation(
@@ -55,16 +57,22 @@ export function Contact() {
 }
 
 function ContactForm() {
-  const { register, handleSubmit, formState } = useForm({
+  const { register, handleSubmit, formState } = useForm<{
+    name: string
+    email: string
+    message: string
+  }>({
     reValidateMode: 'onChange',
   })
 
   const enableSubmit = formState.isDirty && formState.isValid
 
-  const onSubmit = handleSubmit(() => {
+  const onSubmit = handleSubmit(({ name, email, message }) => {
     toast.promise(
-      new Promise((resolve) => {
-        setTimeout(resolve, 2000)
+      axios.post('api/message', {
+        name,
+        email,
+        message,
       }),
       {
         loading: 'Sending message...',
