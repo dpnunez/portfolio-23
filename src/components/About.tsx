@@ -10,6 +10,7 @@ interface CardProps {
   description: string
   location: string
   Icon: typeof BackpackIcon
+  image: string
 }
 
 export function About() {
@@ -77,7 +78,7 @@ function Cards() {
   )
 }
 
-function Card({ title, description, location, Icon }: CardProps) {
+function Card({ title, description, location, Icon, image }: CardProps) {
   return (
     <motion.li
       className="col-span-1 w-full rounded-3xl h-[434px] ring-1 ring-gray-500 p-4 relative cursor-pointer opacity-0"
@@ -90,8 +91,8 @@ function Card({ title, description, location, Icon }: CardProps) {
       }}
     >
       <Image
-        src="https://source.unsplash.com/random"
-        alt="lorem"
+        src={image}
+        alt={title}
         width={500}
         height={500}
         style={{
@@ -103,8 +104,8 @@ function Card({ title, description, location, Icon }: CardProps) {
         className="blur-2xl opacity-50 -z-10"
       />
       <Image
-        src="https://source.unsplash.com/random/"
-        alt="lorem"
+        src={image}
+        alt={title}
         width={500}
         height={500}
         style={{

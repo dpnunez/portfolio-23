@@ -18,18 +18,21 @@ export const aboutCards = [
     Icon: BackpackIcon,
     description: 'Frontend Developer',
     location: 'Pelotas',
+    image: '/nav9.png',
   },
   {
     title: 'UFPel',
     Icon: ReaderIcon,
     description: 'C.S Student',
     location: 'Pelotas',
+    image: '/ufpel.png',
   },
   {
     title: 'IFSul',
     Icon: ReaderIcon,
     description: 'Electronic Student',
     location: 'Pelotas',
+    image: '/ifsul.png',
   },
 ]
 
