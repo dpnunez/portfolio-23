@@ -1,6 +1,7 @@
 'use client'
 import { Logo } from '@/components'
 import { MoonIcon, SunIcon } from '@radix-ui/react-icons'
+import { motion } from 'framer-motion'
 
 import { useTheme } from 'next-themes'
 
@@ -18,17 +19,23 @@ export function Header() {
   return (
     <header className="container h-24 flex items-center justify-between">
       <Logo />
-      <button
+      <motion.button
         onClick={toggleTheme}
         type="button"
-        className="bg-primary-low-opacity rounded-full aspect-square p-4 flex justify-center items-center hover:brightness-125 transition-all duration-300"
+        animate={{
+          opacity: 1,
+        }}
+        transition={{
+          delay: 3,
+        }}
+        className="bg-primary-low-opacity rounded-full aspect-square p-4 opacity-0 flex justify-center items-center hover:brightness-125 transition-all duration-300"
       >
         {theme === 'dark' ? (
           <MoonIcon width={16} height={16} />
         ) : (
           <SunIcon width={16} height={16} />
         )}
-      </button>
+      </motion.button>
     </header>
   )
 }
