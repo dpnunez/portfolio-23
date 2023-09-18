@@ -81,3 +81,56 @@ export const socials = [
     href: 'mailto:daniel.portonunez@gmail.com',
   },
 ]
+
+export const stack = {
+  base: [
+    {
+      icon: '/icons/react.png',
+      name: 'React',
+    },
+    {
+      icon: '/icons/next.png',
+      name: 'Next.js',
+    },
+    {
+      icon: '/icons/ts.png',
+      name: 'TypeScript',
+    },
+  ],
+  tools: [
+    {
+      icon: '/icons/tailwind.png',
+      name: 'Tailwind CSS',
+    },
+    {
+      icon: '/icons/zustand.png',
+      name: 'Zustand',
+    },
+    {
+      icon: '/icons/motion.png',
+      name: 'Framer Motion',
+    },
+    {
+      icon: '/icons/int.png',
+      name: 'React Intl',
+    },
+    {
+      icon: '/icons/rhf.png',
+      name: 'React Hook Form',
+    },
+    {
+      icon: '/icons/radix.png',
+      name: 'Radix UI',
+    },
+  ],
+  design: [
+    {
+      icon: '/icons/figma.png',
+      name: 'Figma',
+    },
+    {
+      icon: '/icons/dribbble.png',
+      name: 'Dribbble',
+    },
+  ],
+}

@@ -1,8 +1,15 @@
 'use client'
-import { animationStackCardsVariants } from '@/constants'
+import { animationStackCardsVariants, stack } from '@/constants'
 import { useNavigation } from '@/global/navigation'
+import * as Tooltip from '@radix-ui/react-tooltip'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { useState } from 'react'
+
+interface itemDataInterface {
+  icon: string
+  name: string
+}
 
 export function Stack() {
   const addNavigationStack = useNavigation((state) => state.pushActiveStack)
@@ -47,7 +54,7 @@ export function Stack() {
             </CardBadge>
           )}
           className="grid-cols-2 border-[1px] border-primary-low-opacity bg-primary-light bg-opacity-20 col-span-1"
-          data={Array.from({ length: 4 })}
+          data={stack.base}
           gridComponent={() => (
             <GridComponent className="bg-primary-low-opacity" />
           )}
@@ -59,7 +66,7 @@ export function Stack() {
             </CardBadge>
           )}
           className="grid-cols-2 lg:grid-cols-3 border-[1px] border-green-low-opacity bg-green bg-opacity-20 col-span-1"
-          data={Array.from({ length: 6 })}
+          data={stack.tools}
           gridComponent={() => (
             <GridComponent className="bg-green-low-opacity" />
           )}
@@ -73,7 +80,7 @@ export function Stack() {
             </CardBadge>
           )}
           className="grid-cols-2 border-[1px] border-purple-low-opacity bg-purple bg-opacity-20 col-span-1"
-          data={Array.from({ length: 2 })}
+          data={stack.design}
           gridComponent={() => (
             <GridComponent className="bg-purple-low-opacity" />
           )}
@@ -112,7 +119,7 @@ export function Stack() {
 }
 
 interface CardListProps {
-  data: any[]
+  data: itemDataInterface[]
   kindBadge: () => JSX.Element
   className?: string
   gridComponent: () => JSX.Element
@@ -148,7 +155,7 @@ function CardList({
         </div>
       </div>
       {data.map((item, i) => {
-        return <Card key={i} />
+        return <Card icon={item.icon} name={item.name} key={i} />
       })}
     </motion.div>
   )
@@ -178,11 +185,31 @@ function CardBadge({
   )
 }
 
-function Card() {
+function Card({ name, icon }: itemDataInterface) {
   return (
     <motion.div
       variants={animationStackCardsVariants}
-      className="w-full lg:w-[164px] rounded-2xl aspect-square bg-slate-50 z-10 opacity-0"
-    ></motion.div>
+      className="w-full lg:w-[164px] rounded-2xl aspect-square z-10 opacity-0 overflow-hidden "
+    >
+      <Tooltip.Provider>
+        <Tooltip.Root>
+          <Tooltip.Trigger asChild>
+            <Image
+              className="hover:scale-110 transition-all duration-300 cursor-pointer"
+              alt={name}
+              src={icon}
+              width={200}
+              height={200}
+            />
+          </Tooltip.Trigger>
+          <Tooltip.Portal>
+            <Tooltip.Content className="TooltipContent" sideOffset={5}>
+              Add to library
+              <Tooltip.Arrow className="TooltipArrow" />
+            </Tooltip.Content>
+          </Tooltip.Portal>
+        </Tooltip.Root>
+      </Tooltip.Provider>
+    </motion.div>
   )
 }
