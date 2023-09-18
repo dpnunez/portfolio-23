@@ -3,6 +3,7 @@ import { socials } from '@/constants'
 import { useNavigation } from '@/global/navigation'
 import { motion } from 'framer-motion'
 import { useForm } from 'react-hook-form'
+import toast from 'react-hot-toast'
 
 export function Contact() {
   const addNavigationStack = useNavigation((state) => state.pushActiveStack)
@@ -61,7 +62,16 @@ function ContactForm() {
   const enableSubmit = formState.isDirty && formState.isValid
 
   const onSubmit = handleSubmit(() => {
-    console.log('teste')
+    toast.promise(
+      new Promise((resolve) => {
+        setTimeout(resolve, 2000)
+      }),
+      {
+        loading: 'Sending message...',
+        success: 'Message sent!',
+        error: 'Message failed to send.',
+      },
+    )
   })
 
   return (
