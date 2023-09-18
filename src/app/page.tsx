@@ -6,21 +6,24 @@ import {
   Stack,
   Navigation,
   Contact,
+  Footer,
 } from '@/components'
 
 export default function Home() {
   return (
-    <main>
+    <>
       <GridBackground />
-
       <Header />
-      <Hero />
-      <div className="sticky top-4 flex justify-center z-20">
-        <Navigation />
-      </div>
-      <About />
-      <Stack />
-      <Contact />
-    </main>
+      <main>
+        <Hero />
+        <div className="sticky top-4 flex justify-center z-20">
+          <Navigation />
+        </div>
+        <About />
+        <Stack />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   )
 }
