@@ -20,6 +20,7 @@ export function Header() {
     <header className="container h-24 flex items-center justify-between">
       <Logo />
       <motion.button
+        aria-label="Toggle theme"
         onClick={toggleTheme}
         type="button"
         animate={{

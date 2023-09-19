@@ -74,14 +74,17 @@ export const socials = [
   {
     icon: GitHubLogoIcon,
     href: 'https://github.com/dpnunez/',
+    name: 'GitHub',
   },
   {
     icon: LinkedInLogoIcon,
     href: 'https://www.linkedin.com/in/daniel-porto-nunez/',
+    name: 'LinkedIn',
   },
   {
     icon: EnvelopeClosedIcon,
     href: 'mailto:daniel.portonunez@gmail.com',
+    name: 'Email',
   },
 ]
 

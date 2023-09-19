@@ -38,8 +38,9 @@ export function Contact() {
             quos voluptatum minima ad.
           </p>
           <div className="flex-1 flex items-center gap-7">
-            {socials.map(({ href, icon: Icon }) => (
+            {socials.map(({ href, icon: Icon, name }) => (
               <a
+                aria-label={name}
                 target="_blank"
                 key={href}
                 href={href}

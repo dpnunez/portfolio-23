@@ -61,7 +61,7 @@ export function Navigation() {
         delay: 1,
       }}
       id="navigation"
-      className="bg-gray-700 h-8 rounded-lg opacity-0 drop-shadow-2xl"
+      className="bg-gray-800 h-8 rounded-lg opacity-0 drop-shadow-2xl"
     >
       <div className="p-1">
         <div className="relative flex w-full h-full items-center box-content">
@@ -111,7 +111,7 @@ function NavigationIndicator({ x, width, height }: coordinatesType) {
         },
       }}
       id="indicator"
-      className="h-full absolute bg-gray-500 box-content rounded-lg opacity-0"
+      className="h-full absolute bg-gray-700 box-content rounded-lg opacity-0"
     />
   )
 }
