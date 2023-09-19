@@ -27,7 +27,7 @@ export default function RootLayout({
           <GridBackground />
           <Header />
           {children}
-          <Footer />
+          {/* <Footer /> */}
         </Providers>
       </body>
     </html>
