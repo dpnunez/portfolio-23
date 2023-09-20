@@ -37,13 +37,12 @@ export function Stack() {
       </div>
 
       <p className="col-span-12 lg:col-span-6 mt-8 mb-14">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
+        I specialize in JavaScript with a primary focus on React and Next.js for
+        creating interactive and responsive web applications. My expertise
+        extends to using Playwright for automated testing to ensure application
+        quality. I&apos;m passionate about JavaScript and stay updated with
+        industry trends, enabling me to deliver high-quality, feature-rich
+        products while driving innovation in every development stage.
       </p>
 
       <div className="col-span-12 flex flex-col lg:flex-row gap-14 lg:gap-6 mb-14 lg:mb-6">

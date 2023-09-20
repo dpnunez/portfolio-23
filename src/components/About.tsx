@@ -44,23 +44,21 @@ export function About() {
           viewport={{ once: true, margin: '-150px 0px -150px 0px' }}
           className="mb-6 opacity-0"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          I&apos;m an experienced front-end developer with a passion for
+          crafting outstanding web experiences. With 4+ years in the field,
+          I&apos;ve honed my skills in turning creative designs into functional
+          and responsive web interfaces.
         </motion.p>
         <motion.p
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: '-150px 0px -150px 0px' }}
           className="opacity-0"
         >
-          Eea commodo consequat. Duis aute irure dolor in reprehenderit in
-          voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-          sint occaecat cupidatat non proident, sunt in culpa qui officia
-          deserunt mollit anim id est laborum.
+          Throughout my career, I&apos;ve built a track record of successful
+          collaborations with design teams, bringing visually captivating web
+          solutions to life. My toolkit includes JavaScript, React and Next.js,
+          and I&apos;ve consistently improved website performance and SEO
+          strategies.
         </motion.p>
       </div>
       <Cards />

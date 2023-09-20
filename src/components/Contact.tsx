@@ -32,10 +32,9 @@ export function Contact() {
       <div className="flex gap-20 lg:gap-8 flex-col lg:flex-row">
         <div className="flex-1 flex flex-col">
           <p className="mb-6 max-w-md">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, ea
-            dolorum quod voluptatibus, architecto assumenda eius porro,
-            perspiciatis et repellendus fuga. Vitae iure, eos aut doloremque
-            quos voluptatum minima ad.
+            Feel free to connect with me here or on LinkedIn. I&apos;m open to
+            discussing web development opportunities and insights. Let&apos;s
+            connect and explore together!
           </p>
           <div className="flex-1 flex items-center gap-7">
             {socials.map(({ href, icon: Icon, name }) => (
