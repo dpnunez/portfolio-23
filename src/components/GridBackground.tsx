@@ -5,7 +5,7 @@ export function GridBackground() {
   return (
     <div className="relative pointer-events-none -z-10">
       <div className="fixed w-screen h-screen">
-        <div className="container w-full h-full mx-auto flex">
+        <div className="container w-full h-full mx-auto flex px-0">
           {Array.from({ length: 6 }).map((_, i) => (
             <motion.div
               animate={{
