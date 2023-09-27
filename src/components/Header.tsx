@@ -47,7 +47,7 @@ export function Header() {
           transition={{
             delay: 3,
           }}
-          className=" rounded-lg p-2 opacity-0 flex justify-center items-center hover:brightness-125 transition-all duration-300 ring-1 ring-primary-dark ring-opacity-40"
+          className="rounded-lg p-2 opacity-0 flex justify-center items-center hover:brightness-125 transition-all duration-300 ring-1 ring-primary-dark ring-opacity-40"
         >
           Resume
         </motion.a>
