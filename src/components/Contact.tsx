@@ -57,7 +57,7 @@ export function Contact() {
 }
 
 function ContactForm() {
-  const { register, handleSubmit, formState } = useForm<{
+  const { register, handleSubmit, formState, reset } = useForm<{
     name: string
     email: string
     message: string
@@ -69,11 +69,15 @@ function ContactForm() {
 
   const onSubmit = handleSubmit(({ name, email, message }) => {
     toast.promise(
-      axios.post('api/message', {
-        name,
-        email,
-        message,
-      }),
+      axios
+        .post('api/message', {
+          name,
+          email,
+          message,
+        })
+        .then(() => {
+          reset()
+        }),
       {
         loading: 'Sending message...',
         success: 'Message sent!',
