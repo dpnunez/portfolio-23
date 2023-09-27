@@ -1,4 +1,4 @@
-import { Footer, GridBackground, Header } from '@/components'
+import { GridBackground, Header } from '@/components'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -10,9 +10,25 @@ const inter = Inter({
   display: 'swap',
 })
 
+const description = `I am a software engineer with a passion for creating beautiful, performant, and accessible experiences.`
 export const metadata: Metadata = {
-  title: 'dpnunez',
-  description: 'Daniel P. Núñez personal website',
+  title: 'Daniel P. Núñez | Software Engineer',
+  icons: '/favicon.ico',
+  openGraph: {
+    type: 'website',
+    url: 'https://dpnunez.tech',
+    title: 'Daniel P. Núñez | Software Engineer',
+    description,
+    images: [
+      {
+        url: '/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Daniel P. Núñez | Software Engineer',
+      },
+    ],
+  },
+  description,
 }
 
 export default function RootLayout({
